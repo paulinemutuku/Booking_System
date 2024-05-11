@@ -1,0 +1,44 @@
+/* Header Gradient - a more harmonized look */
+.header {
+    background-image: linear-gradient(to right, #FF6900, #FF6A00, #CF432D); /* Smooth transition from lighter orange to deep red */
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    color: white; /* Ensures text stands out against the darker end of the gradient */
+}
+
+/* Button Gradient - vibrant and inviting */
+button {
+    background-image: linear-gradient(to bottom, #FF6A00, #CF432D); /* Vibrant orange to deep red */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-image: linear-gradient(to bottom, #CF432D, #FF6A00); /* Invert gradient on hover for interactive feedback */
+}
+
+/* Flatpickr Current Month Header - subtly integrated */
+.flatpickr-current-month {
+    background-image: linear-gradient(to right, #FF6A00, #FF6900); /* Gradient within the orange spectrum for a soft look */
+    color: white;
+}
+
+/* Enhancing the Flatpickr weekdays header */
+.flatpickr-weekday {
+    background-image: linear-gradient(to right, #FF6900, #CF432D); /* From vibrant orange to deep red */
+    color: white;
+}
+
+/* Disabled days in the calendar to denote unavailability */
+.flatpickr-day.disabled,
+.flatpickr-day.disabled:hover {
+    background-image: linear-gradient(to bottom, #F2E2E2, #CCCCCC); /* From lighter gray to darker gray */
+    color: #666;
+    cursor: not-allowed;
+}
