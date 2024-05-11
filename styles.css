@@ -1,12 +1,36 @@
 /* Header Gradient - a more harmonized look */
 .header {
     background-image: linear-gradient(to right, #FF6900, #FF6A00, #CF432D); /* Smooth transition from lighter orange to deep red */
-    padding: 10px 20px;
+    padding: 0.125px 20px; /* Reduced padding */
     width: 100%;
     box-sizing: border-box;
     text-align: center;
     color: white; /* Ensures text stands out against the darker end of the gradient */
 }
+
+/* Form Container */
+.form-container {
+    text-align: center; /* Align form elements in the center */
+}
+
+/* Form Elements */
+input {
+    width: 100px; /* Adjust the width as needed */
+    height: 30px; 
+}
+
+select {
+    width: 200px; /* Adjust the width as needed */
+    height: 30px; /* Set the height of the select dropdown */
+}
+
+label, input, select, button {
+    display: block; /* Display form elements vertically */
+    width: calc(40% - 40px); /* Set width to be slightly less than 100% */
+    margin: 10px auto; /* Center align and provide spacing */
+}
+
+
 
 /* Button Gradient - vibrant and inviting */
 button {
@@ -16,7 +40,7 @@ button {
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
-    width: 100%;
+    margin-top: 30px;
 }
 
 button:hover {
