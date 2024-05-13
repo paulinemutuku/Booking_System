@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('appointment-form');
     const dateInput = document.getElementById('date');
     const timeSelect = document.getElementById('time');
+    const submitBtn = document.getElementById('submit-btn');
 
     // Initialize Flatpickr on the date input with disabled weekends
     flatpickr(dateInput, {
@@ -33,8 +34,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
+    submitBtn.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default form submission
         const name = document.getElementById('name').value.trim();
         const email = document.getElementById('email').value.trim();
         const date = dateInput.value;
@@ -79,14 +80,35 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // function displayMessage(message, type) {
+    //     const messageElement = document.createElement('div');
+    //     messageElement.textContent = message;
+    //     messageElement.className = type; // 'success' or 'error' for styling
+    //     document.body.insertBefore(messageElement, form);
+
+    //     setTimeout(() => {
+    //         document.body.removeChild(messageElement);
+    //     }, 5000);
+    // }
+
     function displayMessage(message, type) {
         const messageElement = document.createElement('div');
         messageElement.textContent = message;
         messageElement.className = type; // 'success' or 'error' for styling
-        document.body.insertBefore(messageElement, form);
-
+        
+        // Insert the message element before the form
+        if (form.parentNode) {
+            form.parentNode.insertBefore(messageElement, form);
+        } else {
+            document.body.appendChild(messageElement); // Fallback if form's parent node is not found
+        }
+    
         setTimeout(() => {
-            document.body.removeChild(messageElement);
+            // Check if the message element is still in the DOM before removing it
+            if (document.body.contains(messageElement)) {
+                document.body.removeChild(messageElement);
+            }
         }, 5000);
-    }
+    }    
+      
 });
