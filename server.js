@@ -87,8 +87,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
 
+// var smtpTransport = require('nodemailer-smtp-transport');
+
 const transporter = nodemailer.createTransport({
-    service: 'gmail',
+// const transport = nodemailer.createTransport(smtpTransport({
+    host: 'smtp.gmail.com',
     auth: {
         user: 'karaniwawerud@gmail.com',
         pass: 'kara33ix!'
