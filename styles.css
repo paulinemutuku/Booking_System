@@ -2,11 +2,13 @@
 .header {
     background-image: linear-gradient(to right, #FF6900, #FF6A00, #CF432D); /* Smooth transition from lighter orange to deep red */
     padding: 0.125px 20px; /* Reduced padding */
+    margin: 0; /* Remove top margin */
     width: 100%;
     box-sizing: border-box;
     text-align: center;
     color: white; /* Ensures text stands out against the darker end of the gradient */
 }
+
 
 /* Form Container */
 .form-container {
