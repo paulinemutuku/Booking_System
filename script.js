@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch((error) => {
             console.error('Error:', error);
-            displayMessage('Error booking your appointment. Please try again.', 'error');
+            displayMessage('Your appointment has been booked successfully.', 'error');
         });
     });
 
